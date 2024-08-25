@@ -15,6 +15,7 @@ This e-commerce application, built using the MERN stack, includes the following 
     > Products can be removed from the cart.
     > The total value of the items in the cart is displayed to the user.
 **Total Value Calculation:** The total value of products in the cart is displayed to the user.
+**User Authentication:** Implemented to link users with the products they add to their cart, ensuring a personalized shopping experience.
 
 # Tech Stack:
 
