@@ -5,7 +5,9 @@ export const authToken = async (req, res,next) => {
 
         const token = req?.headers?.authorization?.split(' ')[1]
 
-        console.log("token",token)
+        console.log("token header",req?.headers)
+        console.log("token header authorization",req?.headers?.authorization)
+
         if(!token){
             return res.status(200).json({
                 message : "Please Login...!",
