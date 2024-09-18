@@ -60,12 +60,12 @@ export const loginController = async (req, res) => {
             expiresIn: "1d"
         })
 
-        const tokenOption={
-            httpOnly:true,
-            secure:true
-        }
+        // const tokenOption={
+        //     httpOnly:true,
+        //     secure:true
+        // }
 
-        res.cookie('token',token,tokenOption).status(200).json({
+        res.status(200).json({
             success: true,
             message: 'login Success',
             data: token
