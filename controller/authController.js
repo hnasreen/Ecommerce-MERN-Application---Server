@@ -101,22 +101,3 @@ export const userDetailsController = async (req, res) => {
         })
     }
 }
-
-export const userLogoutController = async (req, res) => {
-    try{
-        res.clearCookie("token")
-        res.json({
-            message: "Logged out successfully",
-            error:false,
-            success: true,
-            data: []
-        })
-    }catch(error){
-        console.log('error', error);
-        res.status(500).send({
-            success: false,
-            message: 'Error logging out',
-            error
-        })
-    }
-}

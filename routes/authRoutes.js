@@ -1,5 +1,5 @@
 import express from 'express';
-import {registerController,loginController, userDetailsController, userLogoutController} from "../controller/authController.js";
+import {registerController,loginController, userDetailsController} from "../controller/authController.js";
 import { authToken } from '../middleware/authToken.js';
 import { allUsers, updateUsers } from '../controller/userController.js';
 import {filterProductController, getCategoryProductOne, getCategoryWiseProduct, getProduct, getProductDetails, searchProduct, updateProduct, uploadProduct } from '../controller/productController.js';
@@ -12,7 +12,6 @@ import { addToCartController, addToCartViewProduct, countAddToCartProduct, delet
  router.post('/register', registerController);
  router.post('/login', loginController);
  router.get('/user-details' ,authToken,userDetailsController);
- router.get('/logout',userLogoutController);
 
 //  admin panel
 
